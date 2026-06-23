@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First GitHub App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #74abe2, #5563c1);
+            color: white;
+        }
+        .card {
+            background: white;
+            color: #333;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        button {
+            background-color: #5563c1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #434f9a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Welcome to my App!</h2>
+        <p id="message">Click the button below to trigger an action.</p>
+        <button onclick="changeMessage()">Click Me</button>
+    </div>
+
+    <script>
+        function changeMessage() {
+            const messages = [
+                "Hello World! This app is hosted on GitHub! 🚀",
+                "You just executed JavaScript code! 💻",
+                "Keep building awesome things! ✨"
+            ];
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("message").innerText = messages[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
